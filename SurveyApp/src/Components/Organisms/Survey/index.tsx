@@ -61,9 +61,7 @@ const Survey = ({ questions, onComplete, isLoading = false }: SurveyProps) => {
     }, [questions])
 
     const saveSurveyAnswer = (answer: number | string) => {
-        if (answers.current[index]) {
-            answers.current[index].answer = answer
-        }
+        answers.current[index].answer = answer
     }
 
     const checkIfCurrentAnswerValid = () => {

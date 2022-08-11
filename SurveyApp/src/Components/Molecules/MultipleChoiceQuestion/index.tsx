@@ -13,7 +13,7 @@ interface MultipleChoiceQuestionProps {
 const MultipleChoiceQuestion = ({ question, options, maxSelectableCount, onChange }: MultipleChoiceQuestionProps) => {
     const [isSelectedMap, setIsSelectedMap] = useState<Record<string, boolean>>({});
 
-    const _onPress = useCallback((value: string) => {
+    const _onPress = (value: string) => {
         setIsSelectedMap((prev) => {
             let modifiedState = { ...prev };
 
@@ -27,13 +27,10 @@ const MultipleChoiceQuestion = ({ question, options, maxSelectableCount, onChang
                 return prev;
             }
 
+            onChange(Object.keys(modifiedState).join(','))
             return modifiedState;
         })
-    }, [setIsSelectedMap, maxSelectableCount])
-
-    useEffect(() => {
-        onChange(Object.keys(isSelectedMap).join(','))
-    }, [isSelectedMap, onChange])
+    };
 
     return (
         <View>

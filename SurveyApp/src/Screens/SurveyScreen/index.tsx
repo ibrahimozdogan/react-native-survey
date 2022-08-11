@@ -3,14 +3,14 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import { Survey } from '@Components'
 import { Question } from '@Types';
 import { Navigation } from '@Utils';
-import { fetchQuestions } from '@Services';
+import { SurveyApi } from '@Services';
 
 const SurveyScreen = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [questions, setQuestion] = useState<Question[]>([]);
 
     useEffect(() => {
-        fetchQuestions().then((response) => {
+        SurveyApi.fetchQuestions().then((response) => {
             setIsLoading(true);
             setQuestion(response.data);
             setIsLoading(false);

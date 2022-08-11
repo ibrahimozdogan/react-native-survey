@@ -13,7 +13,7 @@ import Svg, { Circle } from 'react-native-svg';
 import styled from 'styled-components/native';
 
 interface LoadingProps {
-    children: React.ReactNode[]|React.ReactNode[];
+    children: React.ReactNode[] | React.ReactNode;
     isLoading: boolean;
 }
 
@@ -74,7 +74,7 @@ const Loading = ({ isLoading, children }: LoadingProps) => {
         );
     }
 
-    return children;
+    return <>{children}</>;
 };
 
 export default Loading;

@@ -1,2 +1,11 @@
+import axios from 'axios';
+import { endpoints } from '@Config';
+import { Question } from '@Types';
 
-export const fetchQuestions =
+const fetchQuestions = () => axios.get<Question[]>(
+    endpoints.FETCH_QUESTIONS,
+);
+
+export {
+    fetchQuestions,
+};
