@@ -1,7 +1,8 @@
 # react-native-survey
 
-![Preview](https://github.com/ibrahimozdogan/react-native-survey/blob/master/SurveyApp/preview.gif)
-
+<p align="center">
+  <img src="https://github.com/ibrahimozdogan/react-native-survey/blob/master/SurveyApp/preview.gif" />
+</p>
 Clone the project, then execute to below commands
 
 ```
