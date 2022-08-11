@@ -1,7 +1,6 @@
 # react-native-survey
 
 <p align="center">
-  Preview
   <img src="https://github.com/ibrahimozdogan/react-native-survey/blob/master/SurveyApp/preview.gif" />
 </p>
 Clone the project, then execute to below commands
