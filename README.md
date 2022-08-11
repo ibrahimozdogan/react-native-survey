@@ -10,8 +10,11 @@ npx pod-install ios
 
 // Above commands only when a new dependency is added
 
-yarn ios --> for ios
-yarn android --> for android
+// For iOS
+yarn ios
+
+// For android
+yarn android
 
 
 ```
